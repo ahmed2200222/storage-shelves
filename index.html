@@ -23,22 +23,11 @@
       font-size: 2rem;
     }
     .hero {
-      background: url("https://picsum.photos/id/1011/1200/600") no-repeat center center/cover;
+      background: #2a5298; /* لون سادة بدل الصورة */
       color: #fff;
       text-align: center;
       padding: 100px 20px;
       position: relative;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-    }
-    .hero .content {
-      position: relative;
-      z-index: 2;
     }
     .hero h2 {
       font-size: 2.5rem;
@@ -47,20 +36,6 @@
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 25px;
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      border-radius: 30px;
-      background: #ff6600;
-      color: #fff;
-      text-decoration: none;
-      transition: 0.3s;
-      font-size: 1rem;
-    }
-    .btn:hover {
-      background: #e65500;
     }
     section {
       padding: 60px 20px;
@@ -95,17 +70,41 @@
       display: block;
       margin-bottom: 10px;
     }
-    .gallery img {
-      width: 300px;
-      border-radius: 12px;
-      margin: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
     footer {
       background: #222;
       color: #fff;
       text-align: center;
       padding: 20px;
+    }
+    /* أزرار الاتصال العائمة */
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .floating-btn a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #25d366; /* لون واتساب */
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .floating-btn a.call {
+      background: #ff6600; /* لون مميز للاتصال */
+    }
+    .floating-btn a:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -118,12 +117,8 @@
 
   <!-- البانر -->
   <section class="hero">
-    <div class="content">
-      <h2>خدمة تركيب الأثاث المعدني باحترافية</h2>
-      <p>جودة عالية – سرعة تنفيذ – أسعار تنافسية</p>
-      <a href="https://wa.me/123456789" target="_blank" class="btn">راسلنا على واتساب</a>
-      <a href="tel:123456789" class="btn">اتصل بنا الآن</a>
-    </div>
+    <h2>أثاث معدني يتحمل الأوزان الثقيلة</h2>
+    <p>تركيب احترافي – جودة عالية – أسعار مناسبة</p>
   </section>
 
   <!-- المميزات -->
@@ -132,31 +127,29 @@
     <div class="features">
       <div class="feature">
         <span>⚡</span>
-        <p>سرعة في التركيب</p>
+        <p>تركيب سريع ودقيق</p>
       </div>
       <div class="feature">
         <span>🛠️</span>
-        <p>أدوات متطورة</p>
+        <p>أدوات وتقنيات حديثة</p>
       </div>
       <div class="feature">
         <span>🏆</span>
-        <p>خبرة وجودة مضمونة</p>
+        <p>متانة وضمان للجودة</p>
       </div>
     </div>
-  </section>
-
-  <!-- معرض الصور -->
-  <section class="gallery">
-    <h2>نماذج من أعمالنا</h2>
-    <img src="https://picsum.photos/seed/metal1/400/250" alt="أثاث معدني 1">
-    <img src="https://picsum.photos/seed/metal2/400/250" alt="أثاث معدني 2">
-    <img src="https://picsum.photos/seed/metal3/400/250" alt="أثاث معدني 3">
   </section>
 
   <!-- الفوتر -->
   <footer>
     <p>© 2025 تركيب أثاث معدني - جميع الحقوق محفوظة</p>
   </footer>
+
+  <!-- أزرار الاتصال العائمة -->
+  <div class="floating-btn">
+    <a href="https://wa.me/123456789" target="_blank">💬</a>
+    <a href="tel:123456789" class="call">📞</a>
+  </div>
 
 </body>
 </html>
