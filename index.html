@@ -16,4 +16,147 @@
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: #fff;
       padding: 20px;
-      text-
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .hero {
+      background: url("https://picsum.photos/id/1011/1200/600") no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero .content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 30px;
+      background: #ff6600;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background: #e65500;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #1e3c72;
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .feature {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      transition: 0.3s;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+    .feature span {
+      font-size: 2.5rem;
+      color: #ff6600;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .gallery img {
+      width: 300px;
+      border-radius: 12px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الهيدر -->
+  <header>
+    <h1>تركيب أثاث معدني</h1>
+  </header>
+
+  <!-- البانر -->
+  <section class="hero">
+    <div class="content">
+      <h2>خدمة تركيب الأثاث المعدني باحترافية</h2>
+      <p>جودة عالية – سرعة تنفيذ – أسعار تنافسية</p>
+      <a href="https://wa.me/123456789" target="_blank" class="btn">راسلنا على واتساب</a>
+      <a href="tel:123456789" class="btn">اتصل بنا الآن</a>
+    </div>
+  </section>
+
+  <!-- المميزات -->
+  <section>
+    <h2>لماذا تختارنا؟</h2>
+    <div class="features">
+      <div class="feature">
+        <span>⚡</span>
+        <p>سرعة في التركيب</p>
+      </div>
+      <div class="feature">
+        <span>🛠️</span>
+        <p>أدوات متطورة</p>
+      </div>
+      <div class="feature">
+        <span>🏆</span>
+        <p>خبرة وجودة مضمونة</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- معرض الصور -->
+  <section class="gallery">
+    <h2>نماذج من أعمالنا</h2>
+    <img src="https://picsum.photos/seed/metal1/400/250" alt="أثاث معدني 1">
+    <img src="https://picsum.photos/seed/metal2/400/250" alt="أثاث معدني 2">
+    <img src="https://picsum.photos/seed/metal3/400/250" alt="أثاث معدني 3">
+  </section>
+
+  <!-- الفوتر -->
+  <footer>
+    <p>© 2025 تركيب أثاث معدني - جميع الحقوق محفوظة</p>
+  </footer>
+
+</body>
+</html>
